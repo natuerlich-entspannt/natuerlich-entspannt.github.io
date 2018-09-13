@@ -27,6 +27,10 @@ hr.light {
   border-color: #fff;
 }
 
+hr.lg {
+  border-color: #8CCE40;
+}
+
 hr.dark {
   border-color: #036016;
 }
