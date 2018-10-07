@@ -4,8 +4,11 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-creative/blob/master/LICENSE)
  */
 /*
- * Color Scheme: #00AE00, #ABFF4F, #036016, #8CCE40
+ * Color Scheme: #81FF01
  */
+
+@font-face { font-family: Castorgate;
+             src: url('/font/CASTOR__.ttf') format('truetype'); }
 
 body,
 html {
@@ -14,13 +17,13 @@ html {
 }
 
 body {
-  font-family: 'Merriweather', 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Times New Roman', serif;
 }
 
 hr {
   max-width: 50px;
   border-width: 3px;
-  border-color: #00AE00;
+  border-color: #81FF01;
 }
 
 hr.light {
@@ -28,21 +31,25 @@ hr.light {
 }
 
 hr.lg {
-  border-color: #8CCE40;
+  border-color: #81FF01;
 }
 
 hr.dark {
-  border-color: #036016;
+  border-color: #212529;
+}
+
+table.noborder td, table.noborder th {
+  border-width: 0px;
 }
 
 a {
-  color: #00AE00;
+  color: #81FF01;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
 a:hover {
-  color: #00AE00;
+  color: #81FF01;
 }
 
 h1,
@@ -51,15 +58,16 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: .1em;
 }
 
 .bg-primary {
-  background-color: #8CCE40 !important;
+  background-color: #81FF01 !important;
 }
 
 .bg-dark {
-  background-color: #036016 !important;
+  background-color: #212529 !important;
 }
 
 .text-faded {
@@ -104,7 +112,8 @@ img::-moz-selection {
 #mainNav {
   border-bottom: 1px solid rgba(33, 37, 41, 0.1);
   background-color: #fff;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: .1em;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -112,12 +121,13 @@ img::-moz-selection {
 #mainNav .navbar-brand {
   font-weight: 700;
   text-transform: uppercase;
-  color: #00AE00;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  color: #81FF01;
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: .1em;
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-  color: #00AE00;
+  color: #81FF01;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link,
@@ -130,12 +140,12 @@ img::-moz-selection {
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-  color: #00AE00;
+  color: #81FF01;
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link.active,
 #mainNav .navbar-nav > li.nav-item > a.nav-link:focus.active {
-  color: #00AE00 !important;
+  color: #81FF01 !important;
   background-color: transparent;
 }
 
@@ -149,16 +159,28 @@ img::-moz-selection {
   padding-right: 0.25em;
 }
 
+.logo4-inline {
+  fill: #81FF01 !important;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+}
+
 @media (min-width: 992px) {
   #mainNav {
     border-color: transparent;
-    background-color: #8CCE40;
+    background-color: #81FF01;
   }
   #mainNav .navbar-brand {
     color: rgba(0, 0, 0, 0.7);
   }
+  .logo4-inline {
+    fill: #212529 !important;
+  }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
     color: #fff;
+  }
+  #mainNav .navbar-brand:focus .logo4-inline, #mainNav .navbar-brand:hover .logo4-inline {
+    fill: #ffffff !important;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link {
     padding: 0.5rem 1rem;
@@ -176,10 +198,13 @@ img::-moz-selection {
     background-color: #fff;
   }
   #mainNav.navbar-shrink .navbar-brand {
-    color: #00AE00;
+    color: #81FF01;
+  }
+  #mainNav.navbar-shrink .navbar-brand .logo4-inline {
+    fill: #81FF01 !important;
   }
   #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
-    color: #00AE00;
+    color: #81FF01;
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus {
@@ -187,16 +212,13 @@ img::-moz-selection {
   }
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
   #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
-    color: #00AE00;
+    color: #81FF01;
   }
 }
 
 header.masthead {
   padding-top: 10rem;
   padding-bottom: calc(10rem - 56px);
-  background-image: url("../img/header_buddha.jpg");
-  background-position: center center;
-  background-size: cover;
 }
 
 header.masthead hr {
@@ -236,6 +258,11 @@ header.masthead p {
   }
 }
 
+.masthead-logo {
+  max-height: 250px;
+  margin-bottom: 20px;
+}
+
 .service-box {
   max-width: 400px;
 }
@@ -256,7 +283,6 @@ header.masthead p {
   text-align: center;
   opacity: 0;
   color: #fff;
-/*  background: rgba(240, 95, 64, 0.9);*/
   background: rgba(0, 174, 0, 0.9);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
@@ -305,11 +331,11 @@ header.masthead p {
 }
 
 .text-primary {
-  color: #00AE00 !important;
+  color: #81FF01 !important;
 }
 
 .text-dark {
-  color: #036016 !important;
+  color: #212529 !important;
 }
 
 .btn {
@@ -317,7 +343,8 @@ header.masthead p {
   text-transform: uppercase;
   border: none;
   border-radius: 300px;
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
+  letter-spacing: .1em;
 }
 
 .btn-xl {
@@ -325,8 +352,8 @@ header.masthead p {
 }
 
 .btn-primary {
-  background-color: #8CCE40;
-  border-color: #8CCE40;
+  background-color: #81FF01;
+  border-color: #81FF01;
   color: rgba(0,0,0,.7);
 }
 
@@ -344,15 +371,7 @@ header.masthead p {
   text-align: center!important;
 }
 
-@font-face { font-family: Castorgate;
-             src: url('/font/CASTOR__.ttf') format('truetype'); }
-
 .font-logo {
   font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
-  letter-spacing: 3px;
-}
-
-.textured {
-  background-image: url(/img/texture_watercolor-paper_green.jpg);
-  background-repeat:repeat;
+  letter-spacing: .1em;
 }
