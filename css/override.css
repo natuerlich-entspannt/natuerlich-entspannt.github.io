@@ -12,12 +12,14 @@ natürlich entspannt css overrides
              src: url('/font/Corbert-Regular.otf') format('opentype'); }
 
 body {
-  font-family: Corbert, 'Times New Roman', serif;
+  font-family: Corbert, 'Times New Roman', serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   font-size: 1.1em;
 }
 
 hr {
   border-color: #93DC00;
+  border-top-width: 3px;
+  width: 50px;
 }
 
 hr.lg {
@@ -50,7 +52,11 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Corbert, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: Corbert, 'Helvetica Neue', Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+}
+
+section {
+  padding: 8rem 0;
 }
 
 .bg-primary {
@@ -62,18 +68,26 @@ h6 {
 }
 
 #mainNav {
-  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   letter-spacing: .1em;
+  text-transform: uppercase;
 }
 
 #mainNav .navbar-brand {
   color: #93DC00;
-  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif !important;
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
   letter-spacing: .1em;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
 }
 
 #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
   color: #93DC00;
+}
+
+#mainNav .navbar-nav .nav-item .nav-link {
+  font-family: Castorgate, 'Helvetica Neue', Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !important;
+
 }
 
 #mainNav .navbar-nav > li.nav-item > a.nav-link:hover,
@@ -111,6 +125,10 @@ h6 {
     fill: #212529 !important;
   }
 
+  #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
+    color: #ffffff !important;
+  }
+
   #mainNav .navbar-brand:focus .logo4-inline, #mainNav .navbar-brand:hover .logo4-inline {
     fill: #ffffff !important;
   }
@@ -120,20 +138,20 @@ h6 {
     color: rgba(0, 0, 0, 0.7);
   }
 
-  #mainNav.navbar-shrink .navbar-brand {
-    color: #93DC00;
+  #mainNav.navbar-scrolled .navbar-brand {
+    color: #93DC00 !important;
   }
 
-  #mainNav.navbar-shrink .navbar-brand .logo4-inline {
+  #mainNav.navbar-scrolled .navbar-brand .logo4-inline {
     fill: #93DC00 !important;
   }
 
-  #mainNav.navbar-shrink .navbar-brand:focus, #mainNav.navbar-shrink .navbar-brand:hover {
+  #mainNav.navbar-scrolled .navbar-brand:focus, #mainNav.navbar-scrolled .navbar-brand:hover {
     color: #93DC00;
   }
 
-  #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:hover,
-  #mainNav.navbar-shrink .navbar-nav > li.nav-item > a.nav-link:focus:hover {
+  #mainNav.navbar-scrolled .navbar-nav > li.nav-item > a.nav-link:hover,
+  #mainNav.navbar-scrolled .navbar-nav > li.nav-item > a.nav-link:focus:hover {
     color: #93DC00;
   }
 }
